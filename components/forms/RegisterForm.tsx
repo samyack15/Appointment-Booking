@@ -190,13 +190,13 @@ const RegisterForm = ({ user }: { user: User }) => {
               placeholder="14 street, New york, NY - 5101"
             />
 
-            <CustomFormField
+            {/* <CustomFormField
               fieldType={FormFieldType.INPUT}
               control={form.control}
               name="occupation"
               label="Occupation"
               placeholder=" Software Engineer"
-            />
+            /> */}
           </div>
 
           {/* Emergency Contact Name & Emergency Contact Number */}
@@ -220,12 +220,12 @@ const RegisterForm = ({ user }: { user: User }) => {
         </section>
 
         <section className="space-y-6">
-          <div className="mb-9 space-y-1">
+          {/* <div className="mb-9 space-y-1">
             <h2 className="sub-header">Medical Information</h2>
-          </div>
+          </div> */}
 
           {/* PRIMARY CARE PHYSICIAN */}
-          <CustomFormField
+          {/* <CustomFormField
             fieldType={FormFieldType.SELECT}
             control={form.control}
             name="primaryPhysician"
@@ -246,11 +246,11 @@ const RegisterForm = ({ user }: { user: User }) => {
                 </div>
               </SelectItem>
             ))}
-          </CustomFormField>
+          </CustomFormField> */}
 
           {/* INSURANCE & POLICY NUMBER */}
           <div className="flex flex-col gap-6 xl:flex-row">
-            <CustomFormField
+            {/* <CustomFormField
               fieldType={FormFieldType.INPUT}
               control={form.control}
               name="insuranceProvider"
@@ -264,11 +264,11 @@ const RegisterForm = ({ user }: { user: User }) => {
               name="insurancePolicyNumber"
               label="Insurance policy number"
               placeholder="ABC123456789"
-            />
+            /> */}
           </div>
 
           {/* ALLERGY & CURRENT MEDICATIONS */}
-          <div className="flex flex-col gap-6 xl:flex-row">
+          {/* <div className="flex flex-col gap-6 xl:flex-row">
             <CustomFormField
               fieldType={FormFieldType.TEXTAREA}
               control={form.control}
@@ -284,10 +284,10 @@ const RegisterForm = ({ user }: { user: User }) => {
               label="Current medications"
               placeholder="Ibuprofen 200mg, Levothyroxine 50mcg"
             />
-          </div>
+          </div> */}
 
           {/* FAMILY MEDICATION & PAST MEDICATIONS */}
-          <div className="flex flex-col gap-6 xl:flex-row">
+          {/* <div className="flex flex-col gap-6 xl:flex-row">
             <CustomFormField
               fieldType={FormFieldType.TEXTAREA}
               control={form.control}
@@ -303,15 +303,15 @@ const RegisterForm = ({ user }: { user: User }) => {
               label="Past medical history"
               placeholder="Appendectomy in 2015, Asthma diagnosis in childhood"
             />
-          </div>
+          </div> */}
         </section>
 
         <section className="space-y-6">
-          <div className="mb-9 space-y-1">
+          {/* <div className="mb-9 space-y-1">
             <h2 className="sub-header">Identification and Verfication</h2>
-          </div>
+          </div> */}
 
-          <CustomFormField
+          {/* <CustomFormField
             fieldType={FormFieldType.SELECT}
             control={form.control}
             name="identificationType"
@@ -323,17 +323,17 @@ const RegisterForm = ({ user }: { user: User }) => {
                 {type}
               </SelectItem>
             ))}
-          </CustomFormField>
-
+          </CustomFormField> */}
+{/* 
           <CustomFormField
             fieldType={FormFieldType.INPUT}
             control={form.control}
             name="identificationNumber"
             label="Identification Number"
             placeholder="123456789"
-          />
+          /> */}
 
-          <CustomFormField
+          {/* <CustomFormField
             fieldType={FormFieldType.SKELETON}
             control={form.control}
             name="identificationDocument"
@@ -343,7 +343,7 @@ const RegisterForm = ({ user }: { user: User }) => {
                 <FileUploader files={field.value} onChange={field.onChange} />
               </FormControl>
             )}
-          />
+          /> */}
         </section>
 
         <section className="space-y-6">

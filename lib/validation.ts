@@ -28,7 +28,7 @@ export const PatientFormValidation = z.object({
     .max(500, "Address must be at most 500 characters"),
   occupation: z
     .string()
-    .min(2, "Occupation must be at least 2 characters")
+    .min(0, "Occupation must be at least 2 characters")
     .max(500, "Occupation must be at most 500 characters"),
   emergencyContactName: z
     .string()
@@ -40,14 +40,14 @@ export const PatientFormValidation = z.object({
       (emergencyContactNumber) => /^\+\d{10,15}$/.test(emergencyContactNumber),
       "Invalid phone number"
     ),
-  primaryPhysician: z.string().min(2, "Select at least one doctor"),
+  primaryPhysician: z.string().min(0, "Select at least one doctor"),
   insuranceProvider: z
     .string()
-    .min(2, "Insurance name must be at least 2 characters")
+    .min(0, "Insurance name must be at least 2 characters")
     .max(50, "Insurance name must be at most 50 characters"),
   insurancePolicyNumber: z
     .string()
-    .min(2, "Policy number must be at least 2 characters")
+    .min(0, "Policy number must be at least 2 characters")
     .max(50, "Policy number must be at most 50 characters"),
   allergies: z.string().optional(),
   currentMedication: z.string().optional(),
@@ -81,7 +81,7 @@ export const CreateAppointmentSchema = z.object({
   schedule: z.coerce.date(),
   reason: z
     .string()
-    .min(2, "Reason must be at least 2 characters")
+    .min(0, "Reason must be at least 2 characters")
     .max(500, "Reason must be at most 500 characters"),
   note: z.string().optional(),
   cancellationReason: z.string().optional(),
@@ -102,7 +102,7 @@ export const CancelAppointmentSchema = z.object({
   note: z.string().optional(),
   cancellationReason: z
     .string()
-    .min(2, "Reason must be at least 2 characters")
+    .min(0, "Reason must be at least 2 characters")
     .max(500, "Reason must be at most 500 characters"),
 });
 
